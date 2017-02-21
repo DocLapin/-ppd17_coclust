@@ -1,6 +1,6 @@
 import numpy as np
 
-from bokeh.plotting import figure, show, output_file
+from bokeh.plotting import figure, show, output_file, output_notebook
 from bokeh.models import HoverTool, ColumnDataSource
 from bokeh.sampledata.les_mis import data
 
@@ -63,5 +63,6 @@ p.select_one(HoverTool).tooltips = [
 ]
 
 output_file("les_mis.html", title="les_mis.py example")
+output_notebook()
 
 show(p) # show the plot
